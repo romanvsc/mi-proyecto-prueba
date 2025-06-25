@@ -1,0 +1,47 @@
+<!-- Ejercicio 2 -->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Sistema de Precios de Entrada</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Sistema de Precios de Entrada</h2>
+            <p class="subtitle">Precio general: $2000 (con descuentos según edad)</p>
+            <form method="get" action="ejercicio2.php">
+                <div class="input-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" placeholder="Ingresa tu edad" min="0" max="120" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Calcular Precio</button>
+            </form>
+            
+            <div class="discount-info">
+                <h4>Descuentos disponibles:</h4>
+                <ul>
+                    <li>Menores de 20 años: <strong>10% descuento</strong></li>
+                    <li>Entre 20-29 años: <strong>7% descuento</strong></li>
+                    <li>Entre 30-39 años: <strong>5% descuento</strong></li>
+                    <li>60 años en adelante: <strong>Sin descuento</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
