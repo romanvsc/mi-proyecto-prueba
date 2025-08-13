@@ -26,14 +26,20 @@ foreach ($estudiantes as $estudiante) {
     $promedio = array_sum($estudiante['notas']) / count($estudiante['notas']);
 }
 
-// Encontrar al estudiante con mejor promedio
+// Encontrar al estudiante con mejor promedio y peor promedio
 $mejor_promedio = 0;
 $estudiante_mejor_promedio = '';
+$peor_promedio = 10;
+$estudiante_peor_promedio = '';
 foreach ($estudiantes as $estudiante) {
     $promedio = array_sum($estudiante['notas']) / count($estudiante['notas']);
     if ($promedio > $mejor_promedio) {
         $mejor_promedio = $promedio;
         $estudiante_mejor_promedio = $estudiante['nombre'];
+    }
+    if ($promedio < $peor_promedio) {
+        $peor_promedio = $promedio;
+        $estudiante_peor_promedio = $estudiante['nombre'];
     }
 }
 // Reporte completo
@@ -47,4 +53,5 @@ foreach ($estudiantes as $estudiante) {
 }
 
 echo "El estudiante con mejor promedio es " . $estudiante_mejor_promedio . " con un promedio de: " . $mejor_promedio . "<br>";
-
+echo "El estudiante con peor promedio es " . $estudiante_peor_promedio . " con un promedio de: " . $peor_promedio . "<br>";
+?>
