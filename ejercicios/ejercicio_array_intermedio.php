@@ -8,7 +8,7 @@
 // Array de estudiantes
 $estudiantes = [
     [
-        'nombre' => 'Juan',
+        'nombre' => 'Roman',
         'edad' => 20,
         'carrera' => 'Ingeniería',
         'notas' => [8, 9, 7]
